@@ -1,0 +1,19 @@
+// linear_search
+#include <stdio.h>
+
+int linear_search(int a[], int n, int key) {
+    for (int i = 0; i < n; ++i)
+        if (a[i] == key) return i;     // 0-based index
+    return -1;
+}
+
+int main(void) {
+    int a[] = {7, 9,8,12, 6, 5, 4};
+    int n = sizeof(a)/sizeof(a[0]);
+    int key = 8;
+
+    int idx = linear_search(a, n, key);
+    if (idx == -1) printf("Not found\n");
+    else           printf("Found at index %d\n", idx);
+    return 0;
+}
