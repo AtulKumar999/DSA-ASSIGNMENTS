@@ -1,0 +1,29 @@
+//implement 4x4 matrix position display
+
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    int a[4][4];
+    int k=1;
+
+    for(i=0;i<4;i++)
+        for(j=0;j<4;j++)
+            a[i][j]=k++;
+
+    printf("Matrix :\n");
+    for(i=0;i<4;i++)
+    {
+        for(j=0;j<4;j++)
+            printf("%3d ",a[i][j]);
+        printf("\n");
+    }
+
+    printf("\nPosition display :\n");
+    for(i=0;i<4;i++)
+    {
+        for(j=0;j<4;j++)
+            printf("(%d,%d) ",i,j);
+        printf("\n");
+    }
+}
